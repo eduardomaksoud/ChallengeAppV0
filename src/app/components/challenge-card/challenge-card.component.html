@@ -1,0 +1,24 @@
+<!-- challenge.component.html -->
+
+<div class="card challenge-card">
+  <div class="card-header">
+    <h2>{{ selectedChallenge!.name }}</h2>
+    <p class="text-muted difficulty">
+      Difficulty: {{ selectedChallenge!.difficultyLevel }}
+    </p>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ selectedChallenge?.description }}</p>
+    <p class="card-text">
+      <strong>Duration:</strong> {{ selectedChallenge!.duration }} hours
+    </p>
+  </div>
+
+  <div class="card-footer">
+    <button class="btn btn-primary" (click)="onGoClick()">Go</button>
+  </div>
+
+  <div class="card-footer" *ngIf="showTimer">
+    <app-timer [durationInHours]="selectedChallenge!.duration!"></app-timer>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<!-- app-challenge-list.component.html -->
+
+<div class="container">
+  <div class="row">
+    <div
+      *ngFor="let challenge of challenges"
+      (click)="onSelectChallenge(challenge)"
+    >
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ challenge.name }}</h5>
+          <p class="card-text">{{ challenge.description }}</p>
+          <p class="card-text">Difficulty: {{ challenge.difficultyLevel }}</p>
+          <p class="card-text">Duration: {{ challenge.duration }} hours</p>
+          <a href="{{ challenge.githubLink }}">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

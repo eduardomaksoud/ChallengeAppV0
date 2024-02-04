@@ -1,0 +1,37 @@
+/* app.component.scss */
+
+.main-content {
+    display: flex;
+    margin: 0 1rem; /* Add margins as needed for spacing */
+    height: 90vh;
+  }
+  
+  .list-and-button-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh; /* Set a maximum height to the container to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .list-container {
+    flex: 1; /* Utilize flex property for flexibility */
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    margin-right: 1rem;
+    margin-top: 1rem;
+    max-height: 80vh; /* Set a maximum height for the container to enable scrolling */
+    overflow-y: auto;
+  }
+  
+  .btn-primary {
+    margin-right: 1rem;
+    align-self: flex-end; /* Align button to the end of the container */
+  }
+  
+  .card-container {
+    flex: 1; /* Utilize flex property for flexibility */
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  

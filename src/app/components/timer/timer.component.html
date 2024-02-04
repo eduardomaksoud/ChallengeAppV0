@@ -1,0 +1,10 @@
+<div class="timer-container">
+  <div class="timer">
+    {{ formatTime(timeRemaining) }}
+  </div>
+  <div class="timer-controls">
+    <button (click)="startTimer()" [disabled]="!isPaused">Start</button>
+    <button (click)="pauseTimer()" [disabled]="isPaused">Pause</button>
+    <button (click)="resetTimer()">Reset</button>
+  </div>
+</div>
